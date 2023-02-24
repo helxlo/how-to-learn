@@ -7,21 +7,79 @@
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
+  text-decoration-color: #000000;
 }
 
 .header {
+  position: relative;
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
+  background-color:#f2f2f2;
+  overflow: hidden;
   /* выше установили ограничения для секции */
 }
-
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
-.header__square-pic {
-  height: 568px;
-  width: 568px;
+.logo_place_header {
+  top: 30px;
+  left: 64px;
+  width: 228px;
+  height: 32px;
+  position: absolute;
+  
 }
 
+.header_title {
+  position: absolute;
+  width: 730px;
+  left: 64px;
+  top: 120px;
+  line-height: 96px;
+  font-size: 102px;
+  font-style: 600;
+  z-index: 2;
+}
+
+.header_subtitle {
+  position: absolute;
+  bottom: 30px;
+  left: 64px;
+  width: 388px;
+  line-height: 25px;
+  font-size: 18px;
+  font-style: normal;
+  z-index: 2;
+}
+
+.header_link {
+  text-decoration: none;
+  color:#2f80ed;
+  z-index: 2;
+}
+
+.header_main-illustration {
+  position: absolute;
+  width: 765px;
+  height: 608px; 
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+.header__square-pic {
+  position: absolute;
+  background: #2f80ed;
+  height: 568px;
+  width: 568px;
+  top: 64px;
+  right: 0;
+  z-index: 0;
+}
+.feynman {
+  background-color:#f2f2f2
+}
+.kaufman {
+  background-color: #1f1f1f;
+}
 /* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
   width: 200px;
