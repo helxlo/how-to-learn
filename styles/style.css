@@ -281,11 +281,14 @@
  .footer {
  display: flex;
  margin: 0;
+ padding: 0;
  background-color: #1f1f1f;
  min-height: 350px;
  }
 
  .footer__columns {
+  margin: 0;
+ padding: 0;
   margin: 60px auto 40px;
   color: white;
   width: 90%;
@@ -324,17 +327,19 @@
  }
 
  .footer__column-link {
+  gap: 10px;
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
   text-decoration: none;
   color: white;
-  margin: 0 auto 0;
-  padding-left: 0;
-  border: 1px solid red;
+  margin: 0;
+  padding: 0;
  }
 
  .footer__social-icon { 
+  margin: 0;
+  padding: 0;
   height: 16px;
   width: 16px;
  }
