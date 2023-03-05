@@ -1,20 +1,23 @@
 .page {
   min-width: 1100px;
+  /* мы ещё не умеем делать мобильную версию сайта, */
+  /* поэтому выше установлена минимальная ширина страницы */
   max-width: 1600px;
+  /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
+  /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
   text-decoration-color: #000000;
 }
 
 .header {
-  display: flex;
-  flex-direction: row;
   position: relative;
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
   background-color:#f2f2f2;
   overflow: hidden;
+  /* выше установили ограничения для секции */
 }
 
 .logo {
@@ -29,9 +32,10 @@
 }
 
 .header__title {
-  align-self: center;
-  margin-left: 64px;
+  position: absolute;
   width: 730px;
+  left: 64px;
+  top: 120px;
   line-height: 96px;
   font-size: 102px;
   font-weight: 600;
@@ -63,7 +67,7 @@
   right: 0;
   z-index: 1;
 }
-
+/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
   position: absolute;
   background: #2f80ed;
@@ -76,12 +80,12 @@
 
 .content {
   margin: 0 auto;
+  
 }
-
 .description {
   margin: 0 auto;
+  justify-content: center;
 }
-
 .two-columns {
   display: flex;
   justify-content: space-between;
@@ -102,27 +106,31 @@
   width: 80%;
   min-width: 784px;
 }
-
 .two-columns__paragraph {
+  
   padding-bottom: 30px;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
 }
-
 .two-columns__span-accent {
   font-weight: 600;
 }
 
 .digits {
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid red;
   padding-top: 100px;
   padding-bottom: 100px;
+
 }
 
 .section-title {
   margin: auto;
   display: flex;
   justify-content: center;
+  border: 1px solid #2f80ed;
   width: 60%;
   line-height: 1.15;
   font-size: 60px;
@@ -133,6 +141,7 @@
   display: flex;
   margin: auto;
   justify-content: center;
+  border: 1px solid #2f80ed;
   width: 60%;
   line-height: 34px;
   font-size: 24px;
@@ -145,6 +154,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  border: 1px solid #2f80ed;
   width: 1100px;
 }
 
@@ -155,12 +165,14 @@
   padding: 0;
   margin: 0;
   flex-wrap: wrap;
+  border: 1px solid rebeccapurple;
   width: 250px;
   margin-top: 60px;
   list-style: none;
 }
 
 .table__heading {
+  border: 1px solid rebeccapurple;
   margin-bottom: 20px;
   line-height: 1.15;
   font-size: 24px;
@@ -169,6 +181,7 @@
 }
 
 .table__text {
+  border: 1px solid red;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
@@ -189,7 +202,6 @@
   background-color:#f2f2f2;
   padding-top: 100px;
 }
-
 .feynman__title {
   text-align: center;
   width: 648px;
@@ -197,7 +209,7 @@
   line-height: 1.15;
   font-size: 120px;
   font-weight: 600;
-  
+  border: 1px solid #2f80ed;
 }
 
 .feynman__subtitle {
@@ -207,8 +219,8 @@
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
+  border: 1px solid #2f80ed;
 }
-
 .feynman__link {
   position: absolute;
   right: 48px;
@@ -239,25 +251,22 @@
   overflow: hidden;
 
 }
-
 .section-title_theme_dark {
   display: flex;
   color: white;
   z-index: 1;
 }
-
 .section-subtitle_theme_dark {
   color: white;
   z-index: 1;
 }
-
 .table_theme_dark {
   display: flex;
   justify-content: space-between;
   position: relative;
   margin: auto;
 }
-
+/* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
   display: flex;
   flex-direction: column;
@@ -277,11 +286,11 @@
   width: 877px;
   height: 877px;
 }
-
  .footer {
  display: flex;
  margin: 0;
  background-color: #1f1f1f;
+ border: 1px solid red;
  min-height: 350px;
  }
 
@@ -291,6 +300,7 @@
   width: 90%;
   display: flex;
   justify-content: space-between;
+  border: 1px solid blue;
  }
 
 .footer__column_content_copyright {
@@ -300,16 +310,30 @@
   flex-basis: 711px;
 }
 
+ .logo_place_footer {
+  border: 1px solid red;
+ }
+
  .footer__author {
   margin: 18px 0;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
+  border: 1px solid red;
+ }
+
+ .footer__column_content_info {
+  border: 1px solid red;
+ }
+
+ .footer__column_content_social {
+  border: 1px solid red;
  }
 
  .footer__column-heading {
   margin-top: 0;
   margin-bottom: 20px;
+  border: 1px solid red;
   line-height: 30px;
   font-size: 18px;
   font-weight: 600;
@@ -320,10 +344,12 @@
   flex-direction: column;
   padding: 0;
   margin: 0 auto 16px;
+  border: 1px solid yellow;
   list-style: none;
  }
 
  .footer__column-link {
+  border: 1px solid red;
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
@@ -334,6 +360,8 @@
  }
 
  .footer__social-icon {
+  border: 1px solid red;
   height: 16px;
   width: 16px;
+
  }
