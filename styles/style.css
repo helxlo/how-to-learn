@@ -331,9 +331,10 @@
   color: white;
   margin: 0 auto 0;
   padding-left: 0;
+  border: 1px solid red;
  }
 
- .footer__social-icon {
+ .footer__social-icon { 
   height: 16px;
   width: 16px;
  }
